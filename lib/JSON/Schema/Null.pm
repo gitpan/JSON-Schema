@@ -1,29 +1,21 @@
-package JSON::Schema::Result;
+package JSON::Schema::Null;
 
 use 5.008;
 use common::sense;
-use overload bool => \&valid;
-
-use JSON::Schema::Error;
+use overload '""' => sub { return '' };
 
 our $VERSION = '0.010';
 
 sub new
 {
-	my ($class, $result) = @_;
-	return bless $result, $class;
+	my ($class) = @_;
+	my $x = '';
+	return bless \$x, $class;
 }
 
-sub valid
+sub TO_JSON
 {
-	my ($self) = @_;
-	return $self->{'valid'};
-}
-
-sub errors
-{
-	my ($self) = @_;
-	return map { JSON::Schema::Error->new($_); } @{$self->{'errors'}};
+	return undef;
 }
 
 1;
@@ -32,39 +24,11 @@ __END__
 
 =head1 NAME
 
-JSON::Schema::Result - the result of checking an instance against a schema
-
-=head1 SYNOPSIS
-
- my $validator = JSON::Schema->new($schema);
- my $json      = from_json( ... );
- my $result    = $validator->validate($json);
- 
- if ($result)
- {
-   print "Valid!\n";
- }
- else
- {
-   print "Errors\n";
-	print " - $_\n" foreach $result->errors;
- }
-
-=head1 DESCRIPTION
-
-L<JSON::Schema::Result> is returned by the L<JSON::Schema> C<validate>
-method. It uses L<overload> to mimic a boolean. That is:
-
-  if ($result) { foo(); } else { bar(); }
-
-Will do "foo" if the result is positive for validity and "bar" if it's negative.
-
-There's also a method C<errors> to get a list of errors. (Which will be
-empty in the case of a positive result.) Each error is a L<JSON::Schema::Error>.
+JSON::Schema::Null - represents JSON's null value
 
 =head1 SEE ALSO
 
-L<JSON::Schema>, L<JSON::Schema::Error>.
+L<JSON::Schema>.
 
 =head1 AUTHOR
 

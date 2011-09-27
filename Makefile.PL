@@ -21,21 +21,21 @@ requires            'JSON'               => '2.00';
 requires            'JSON::Hyper'        => 0;
 requires            'JSON::Path'         => 0;
 requires            'LWP::UserAgent'     => 0;
+requires            'POSIX'              => 0;
 requires            'Scalar::Util'       => 0;
 test_requires       'Test::More'         => '0.61';
 
 keywords 'JSON', 'schema', 'validate';
 
 resources(
-	'homepage'   => "http://search.cpan.org/dist/$dist/",
-	'repository' => "http://goddamn.co.uk/viewvc/perlmods/$dist/",
+	'homepage'   => "https://metacpan.org/release/$dist",
+	'repository' => "http://goddamn.co.uk/svn-web/perlmods/browse/$dist/",
 	'bugtracker' => "http://rt.cpan.org/Dist/Display.html?Queue=$dist",
 	);
 	
 write_doap_changes;
 write_doap_changes_xml;
 
-include 'Test::Signature';
 auto_install;
 WriteAll(
 	'meta' => 1,
