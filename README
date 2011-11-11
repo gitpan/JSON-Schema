@@ -2,7 +2,7 @@ NAME
     JSON::Schema - validate JSON against a schema
 
 SYNOPSIS
-     my $validator = JSON::Schema->new($schema);
+     my $validator = JSON::Schema->new($schema, %options);
      my $json      = from_json( ... );
      my $result    = $validator->validate($json);
  
@@ -18,7 +18,7 @@ SYNOPSIS
 
 DESCRIPTION
   Constructors
-    "JSON::Schema->new($schema)"
+    "JSON::Schema->new($schema, %options)"
         Given a JSON (or equivalent Perl nested hashref/arrayref structure)
         Schema, returns a Perl object capable of checking objects against
         that schema.
@@ -27,6 +27,16 @@ DESCRIPTION
         inclusions; this module does not expand those, but the JSON::Hyper
         module can.
 
+        The only option currently supported is 'format' which takes a
+        hashref of formats (section 5.23 of the current JSON Schema draft)
+        such that the keys are the names of the formats, and the values are
+        regular expressions or callback functions. %JSON::Schema::FORMATS
+        provides a library of useful format checkers, but by default no
+        format checkers are used.
+
+         my $s = JSON::Schema->new($schema,
+                                   format => \%JSON::Schema::FORMATS);
+
     "JSON::Schema->detect($url)"
         Given the URL for a JSON instance (or an HTTP::Response object)
         returns a list of schemas (as JSON::Schema objects) that the JSON
@@ -34,12 +44,19 @@ DESCRIPTION
         headers.
 
   Methods
-    "schema"
-        Returns the original schema as a hashref/arrayref structure.
-
     "validate($object)"
         Validates the object against the schema and returns a
         JSON::Schema::Result.
+
+    "schema"
+        Returns the original schema as a hashref/arrayref structure.
+
+    "format"
+        Returns the hashref of format checkers.
+
+    "ua"
+        Returns the LWP::UserAgent that this schema object has used or would
+        use to retrieve content from the web.
 
   Perl Specifics
     Perl uses weak typing. This module largely gives JSON instances the
