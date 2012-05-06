@@ -6,8 +6,9 @@
 	:perl_version_from _:main ;
 	:version_from _:main ;
 	:readme_from _:main ;
-	:test_requires "Test::More 0.61" ;
+	:test_requires "Test::More 0.94" ;
 	:requires
+		"autovivification 0",
 		"Carp 1.00" ,
 		"common::sense" ,
 		"HTTP::Link::Parser 0.100" ,

@@ -32,10 +32,13 @@ META.yml
 meta/changes.ttl
 meta/doap.ttl
 meta/makefile.ttl
+meta/rt-bugs.ttl
 README
 t/01basic.t
 t/02integer.t
 t/03required.t
 t/04format.t
+t/rt-76892.t
+t/rt-76944.t
 TODO
 SIGNATURE                                Public-key signature (added by MakeMaker)
