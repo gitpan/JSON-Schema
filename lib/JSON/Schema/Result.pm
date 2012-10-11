@@ -1,12 +1,13 @@
 package JSON::Schema::Result;
 
 use 5.010;
-use common::sense;
+use strict;
 use overload bool => \&valid;
 
 use JSON::Schema::Error;
 
-our $VERSION = '0.012';
+our $AUTHORITY = 'cpan:TOBYINK';
+our $VERSION   = '0.013';
 
 sub new
 {
@@ -72,7 +73,7 @@ Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
 =head1 COPYRIGHT AND LICENCE
 
-Copyright 2010-2011 Toby Inkster.
+Copyright 2010-2012 Toby Inkster.
 
 This module is tri-licensed. It is available under the X11 (a.k.a. MIT)
 licence; you can also redistribute it and/or modify it under the same

@@ -6,9 +6,18 @@ Home page:    <https://metacpan.org/release/JSON-Schema>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=JSON-Schema>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.013  2012-10-11
+
+ - (Bugfix) Fix for union types.
+   ++$DAVIDIAM
+ - (Bugfix) Patched 02integer.t.
+   ++$DAVIDIAM
+ - Drop common::sense dependency.
+
 0.012  2012-05-06
 
- - (Bugfix) Fixes for 'additionalProperties' being false or non-existant.
+ - (Bugfix Bugfix) Fixes for 'additionalProperties' being false or
+   non-existant.
 
 0.011  2011-11-11
 

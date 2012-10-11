@@ -1,7 +1,7 @@
 package JSON::Schema;
 
 use 5.010;
-use common::sense;
+use strict;
 
 use Carp;
 use HTTP::Link::Parser qw[parse_links_to_rdfjson relationship_uri];
@@ -12,7 +12,8 @@ use JSON::Schema::Helper;
 use JSON::Schema::Result;
 use LWP::UserAgent;
 
-our $VERSION = '0.012';
+our $AUTHORITY = 'cpan:TOBYINK';
+our $VERSION   = '0.013';
 our %FORMATS;
 
 BEGIN {
@@ -278,7 +279,7 @@ L<http://code.google.com/p/jsonschema/>.
 
 Copyright 2007-2009 Kris Zyp.
 
-Copyright 2010-2011 Toby Inkster.
+Copyright 2010-2012 Toby Inkster.
 
 This module is tri-licensed. It is available under the X11 (a.k.a. MIT)
 licence; you can also redistribute it and/or modify it under the same

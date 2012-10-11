@@ -17,7 +17,8 @@ inc/Module/Install/WriteAll.pm
 inc/Module/Package.pm
 inc/Module/Package/Dist/RDF.pm
 inc/Scalar/Util.pm
-inc/Scalar/Util/PP.pm
+inc/unicore/Name.pm
+inc/utf8.pm
 inc/YAML/Tiny.pm
 lib/JSON/Schema.pm
 lib/JSON/Schema/Error.pm
@@ -38,6 +39,7 @@ t/01basic.t
 t/02integer.t
 t/03required.t
 t/04format.t
+t/05union.t
 t/rt-76892.t
 t/rt-76944.t
 TODO
