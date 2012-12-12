@@ -39,4 +39,4 @@ resources:
   homepage: https://metacpan.org/release/JSON-Schema
   license: http://dev.perl.org/licenses/
   repository: http://goddamn.co.uk/svn-web/perlmods/browse/JSON-Schema/
-version: 0.013
+version: 0.014

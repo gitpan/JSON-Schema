@@ -31,7 +31,7 @@ use POSIX qw[modf];
 use Scalar::Util qw[blessed];
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.013';
+our $VERSION   = '0.014';
 
 sub new
 {
@@ -294,12 +294,12 @@ sub checkProp
 					unless $value ~~ $format_checker;
 			}
 			if ($schema->{'maxLength'} and $self->jsMatchType('string', $value)
-			and strlen($value) > $schema->{'maxLength'})
+			and length($value) > $schema->{'maxLength'})
 			{
 				$addError->("may only be " . $schema->{'maxLength'} . " characters long");
 			}
 			if ($schema->{'minLength'} and $self->jsMatchType('string', $value)
-			and strlen($value) < $schema->{'minLength'})
+			and length($value) < $schema->{'minLength'})
 			{
 				$addError->("must be at least " . $schema->{'minLength'} . " characters long");
 			}
