@@ -13,7 +13,7 @@ use JSON::Schema::Result;
 use LWP::UserAgent;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.014';
+our $VERSION   = '0.015';
 our %FORMATS;
 
 BEGIN {
@@ -160,7 +160,7 @@ JSON::Schema - validate JSON against a schema
  else
  {
    print "Errors\n";
-	print " - $_\n" foreach $result->errors;
+   print " - $_\n" foreach $result->errors;
  }
 
 =head1 DESCRIPTION
@@ -236,7 +236,7 @@ with any Perl package name. i.e. the following is valid:
   my $validator = JSON::Schema->new({
     properties => { 
       'time' => { type => ['DateTime','string'] },
-	 },
+    },
   });
   my $object = {
     'time' => DateTime->now;

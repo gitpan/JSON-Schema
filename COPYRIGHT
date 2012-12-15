@@ -72,7 +72,35 @@ Files: lib/JSON/Schema/Result.pm
 Copyright: Copyright 2010-2012 Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: Changes LICENSE MANIFEST.SKIP Makefile.PL README TODO examples/validation.pl inc/Module/Package/Dist/RDF.pm lib/JSON/Schema/Examples.pod meta/changes.ttl meta/doap.ttl meta/makefile.ttl meta/rt-bugs.ttl t/01basic.t t/02integer.t t/03required.t t/04format.t t/05union.t t/06lengths.t t/rt-76892.t t/rt-76944.t
+Files: t/01basic.t
+Copyright: Copyright 2010-2012 Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: t/04format.t
+Copyright: Copyright 2011-2012 Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: t/05union.t
+Copyright: Copyright 2012 DAVIDIAM.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: t/06lengths.t
+Copyright: Copyright 2012 Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: t/07enum.t
+Copyright: Copyright 2012 Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: t/rt-76892.t
+Copyright: Copyright 2012 Piotr Piatkowski.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: t/rt-76944.t
+Copyright: Copyright 2012 sdevoid at gmail dot com.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: Changes HACKING LICENSE MANIFEST.SKIP Makefile.PL README TODO examples/validation.pl inc/Module/Package/Dist/RDF.pm lib/JSON/Schema/Examples.pod meta/changes.ttl meta/doap.ttl meta/makefile.ttl meta/rt-bugs.ttl t/02integer.t t/03required.t
 Copyright: Unknown
 License: Unknown
 

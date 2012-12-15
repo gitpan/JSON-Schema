@@ -6,6 +6,13 @@ Home page:    <https://metacpan.org/release/JSON-Schema>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=JSON-Schema>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.015  2012-12-15
+
+ - (Bugfix) enum assumed that all enumerated values would be
+   non-references; this assumption was incorrect. Reference values are now
+   allowed in an enumeration.
+ - (Documentation) Document test suite.
+
 0.014  2012-12-12
 
  - (Bugfix) Fix for string lengths.

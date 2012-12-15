@@ -13,7 +13,7 @@ SYNOPSIS
      else
      {
        print "Errors\n";
-            print " - $_\n" foreach $result->errors;
+       print " - $_\n" foreach $result->errors;
      }
 
 DESCRIPTION
@@ -71,7 +71,7 @@ DESCRIPTION
       my $validator = JSON::Schema->new({
         properties => { 
           'time' => { type => ['DateTime','string'] },
-             },
+        },
       });
       my $object = {
         'time' => DateTime->now;
